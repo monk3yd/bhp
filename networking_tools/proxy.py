@@ -154,7 +154,7 @@ def server_loop(local_host, local_port, remote_host, remote_port, receive_first)
         sys.exit(0)
 
     # Listen to local host
-    print(f"[*] Listening on {local_host}{local_port}")
+    print(f"[*] Listening on {local_host}:{local_port}")
     server.listen(5)
     # Main loop handles new connection request by passing it into proxy_handler
     # in new thread
