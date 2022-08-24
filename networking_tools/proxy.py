@@ -55,8 +55,8 @@ def hexdump(src, length=16, show=True):
     if show:
         for line in results:
             print(line)
-        else:
-            return results
+    else:
+        return results
 
 
 def receive_from(connection):
@@ -114,8 +114,7 @@ def proxy_handler(client_socket, remote_host, remote_port, receive_first):
         # Continually read from local client, process the data and send it to remote client
         local_buffer = receive_from(client_socket)
         if len(local_buffer):
-            line = f"[==>]Received {len(local_buffer)} bytes from localhost."
-            print(line)
+            print(f"[==>]Received {len(local_buffer)} bytes from localhost.")
             hexdump(local_buffer)
 
             local_buffer = request_handler(local_buffer)
