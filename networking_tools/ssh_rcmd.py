@@ -8,8 +8,8 @@ def main():
     user = getpass.getuser()
     password = getpass.getpass()
 
-    ip = input("Enter server IP: ")
-    port = input("Enter port: ")
+    ip = input("Enter server IP: ") or "192.168.1.144"
+    port = input("Enter port: ") or 22
     ssh_command(ip, port, user, password, "ClientConnected")
     ...
 
