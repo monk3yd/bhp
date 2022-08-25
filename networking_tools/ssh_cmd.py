@@ -27,7 +27,7 @@ def ssh_command(ip, port, user, passwd, cmd):
         password=passwd,
     )
 
-    _, stdout, stderr = client.exec_command(cmd)
+    _, stdout, stderr = client.exec_command(cmd, timeout=15)
     output = stdout.readlines() + stderr.readlines()
     if output:
         print("---Output---")
