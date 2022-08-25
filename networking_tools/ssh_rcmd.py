@@ -5,7 +5,8 @@ import subprocess
 
 
 def main():
-    user = getpass.getuser()
+    # user = getpass.getuser()
+    user = input("Username: ") or "tim"
     password = getpass.getpass()
 
     ip = input("Enter server IP: ") or "192.168.1.144"
