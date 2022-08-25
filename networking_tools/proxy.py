@@ -67,7 +67,7 @@ def receive_from(connection):
     # Create byte string buffer that will accumulate responses from socket
     buffer = b""
     # default 5 seconds timeout (increase as necessary)
-    connection.settimeout(13)
+    connection.settimeout(30)
     try:
         # Read response data into buffer until no more data or timeout
         while True:
